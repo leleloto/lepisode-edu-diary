@@ -1,0 +1,7 @@
+{
+  "name": "lepisode-edu-diary",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
