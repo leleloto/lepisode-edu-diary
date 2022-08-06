@@ -1,41 +1,63 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" scroll-y="False">
+  <ion-header class="ion-padding-bottom" collapse="condense">
     <ion-toolbar>
       <ion-title size="large">OOO의 일기</ion-title>
+      <!-- <ion-button slot="end" shape="round" href="#" color="tertiary">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button> -->
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item>
-      <ion-label class="ion-text-wrap">
-        <ion-text color="primary">
-          <h3>예쁜 카페 간날</h3>
-        </ion-text>
-        <p>2022년 8월 6일</p>
-        <ion-text color="secondary">
-          <p>오늘은 예쁜 여자랑 예쁜 카페에 갔다. 돈을 많이 썼다.</p>
-        </ion-text>
-      </ion-label>
-    </ion-item>
-  </ion-list>
   <!-- Item Dividers in a List -->
-  <ion-list>
-    <ion-item-divider>
-      <ion-label> 2022-8-6 </ion-label>
-    </ion-item-divider>
-    <ion-item><ion-label>오늘의 일기1</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기2</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기3</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기4</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기5</ion-label></ion-item>
-    <ion-item-divider>
-      <ion-label> 2022-8-5 </ion-label>
-    </ion-item-divider>
-    <ion-item><ion-label>오늘의 일기1</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기2</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기3</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기4</ion-label></ion-item>
-    <ion-item><ion-label>오늘의 일기5</ion-label></ion-item>
-  </ion-list>
+  <ion-accordion-group [multiple]="true" [value]="['first', 'third']">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>2022-8-6</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item><ion-label>오늘의 일기1</ion-label></ion-item>
+        <ion-item>
+          <ion-label class="ion-text-wrap">
+            <ion-text color="primary">
+              <h3>예쁜 카페 간날</h3>
+            </ion-text>
+            <p>2022년 8월 6일</p>
+            <ion-text color="secondary">
+              <p>오늘은 예쁜 여자랑 예쁜 카페에 갔다. 돈을 많이 썼다.</p>
+            </ion-text>
+          </ion-label>
+        </ion-item>
+        <ion-item><ion-label>오늘의 일기2</ion-label></ion-item>
+        <ion-item><ion-label>오늘의 일기3</ion-label></ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>2022-8-5</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item><ion-label>오늘의 일기1</ion-label></ion-item>
+        <ion-item><ion-label>오늘의 일기2</ion-label></ion-item>
+        <ion-item><ion-label>오늘의 일기3</ion-label></ion-item>
+      </ion-list>
+    </ion-accordion>
+
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>2022-8-4</ion-label>
+      </ion-item>
+      <ion-list slot="content">
+        <ion-item><ion-label>오늘의 일기1</ion-label></ion-item>
+        <ion-item><ion-label>오늘의 일기2</ion-label></ion-item>
+        <ion-item><ion-label>오늘의 일기3</ion-label></ion-item>
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
->
